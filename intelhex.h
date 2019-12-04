@@ -72,6 +72,8 @@ public:
 	qint32 readPage(quint32 &currentAddress, char **data, bool readAllSegments = 1);
 	inline qint32 totalPages() { return pagesInFile; }
 
+    inline const QByteArray& segmentData(qint32 index) const { return segments.at(index).data; }
+
 private:
 	void processHexLine(QString &line);
 	quint32 getLineType(QString line);
