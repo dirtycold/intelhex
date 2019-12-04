@@ -60,7 +60,7 @@ class Q_INTELHEX_EXPORT IntelHex : public QObject
 {
 	Q_OBJECT
 public:
-	explicit IntelHex(QObject *parent = 0);
+    explicit IntelHex(QObject *parent = nullptr);
 	bool open(QString fileName, quint32 pageSize);
 	inline void reReadAll() { segmentIdx = 0; segmentPos = 0; }
 	inline void reReadSegment() { segmentPos = 0; }
